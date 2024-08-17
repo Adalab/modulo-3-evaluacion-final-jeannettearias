@@ -16,7 +16,7 @@ function Filters() {
     //HTML code
     return (
         <section className='filter__section'>
-            <form className='form__box'>
+            <form className='form'>
                 <div>
                     <label className='form__label'>Selecciona la casa: </label>
                     <select className='form__select' name="house" id="house">

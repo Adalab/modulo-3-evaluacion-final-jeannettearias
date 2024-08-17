@@ -1,15 +1,15 @@
 .search__section {
   display: flex;
-  flex-direction: row;
   margin-bottom: 1rem;
+
+  .form__label {
+    width: 20rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+
   .form__input {
     width: 18rem;
-    height: 1.8rem;
+    height: 1.7rem;
   }
-}
-
-.form__label {
-  display: flex;
-  width: 18rem;
-  height: 1.8rem;
 }

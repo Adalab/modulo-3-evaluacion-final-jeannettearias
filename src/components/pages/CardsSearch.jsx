@@ -17,7 +17,7 @@ function CardsSearch() {
     return (
         <>
             <section className="search__section">
-                <form className='form__section'>
+                <form className='form'>
                     <div>
                         <label className='form__label'>Busca por Personaje: </label>
                         <input className='form__input' type="text" name="search" id="search" />

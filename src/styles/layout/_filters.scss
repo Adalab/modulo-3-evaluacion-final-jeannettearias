@@ -1,8 +1,16 @@
 .filter__section {
   display: flex;
+  flex-direction: row;
   margin-bottom: 2rem;
+
+  .form__label {
+    width: 20rem;
+    height: 2rem;
+    margin-right: 1.8rem;
+  }
+
   .form__select {
-    width: 18rem;
+    width: 18.5rem;
     height: 2rem;
   }
 }
