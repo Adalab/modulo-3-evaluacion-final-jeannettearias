@@ -1,10 +1,9 @@
+
 import CharacterCard from "./CharacterCard";
 
-
-function CharacterList() {
+function CharacterList({ characters }) {
 
     //global variables
-
 
 
     //code when the page load
@@ -13,16 +12,18 @@ function CharacterList() {
     //events and functions
 
 
-
     //HTML code
     return (
-        <>
-            <section>
-                <CharacterCard />
 
-            </section>
-        </>
-
+        <section>
+            <ul className='cards' >
+                {characters.map((character) => (
+                    <li key={character.id} className="card">
+                        <CharacterCard character={character} />
+                    </li>
+                ))}
+            </ul>
+        </section>
     );
 }
 
