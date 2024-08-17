@@ -3,8 +3,8 @@ import '../styles/layout/_header.scss';
 import Header from './layout/Header';
 import Filters from './pages/Filters';
 import CharacterList from './pages/CharacterList';
-
-
+import CharacterDetail from './pages/CharacterDetail';
+import CardsSearch from './pages/CardsSearch';
 import Footer from './layout/Footer';
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
 
 
   //code when the page load
+
 
 
   //events and functions
@@ -29,9 +30,12 @@ function App() {
 
       <main className='main'>
         <section>
+          <CardsSearch />
           <Filters />
           <CharacterList />
-
+        </section>
+        <section>
+          <CharacterDetail />
         </section>
       </main>
 

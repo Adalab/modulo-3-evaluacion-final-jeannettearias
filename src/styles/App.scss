@@ -7,10 +7,9 @@
 }
 
 .main {
-  color: whitesmoke;
   display: flex;
-
-  .filter__section {
-    display: flex;
-  }
+  margin-right: 2rem;
+  margin-left: 2rem;
+  color: whitesmoke;
+  justify-content: center;
 }
