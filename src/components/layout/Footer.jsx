@@ -1,10 +1,14 @@
 function Footer() {
 
-
     return (
         <>
-        </>
+            <div className='footer' >
+                <span>
+                    &copy; Almost all Rights Reserved by Jeannette Arias
+                </span>
 
+            </div>
+        </>
     );
 }
 

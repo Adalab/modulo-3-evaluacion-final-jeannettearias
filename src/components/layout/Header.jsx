@@ -1,6 +1,5 @@
 function Header() {
 
-
     return (
         <>
             <header className='darkmode'>
@@ -11,7 +10,6 @@ function Header() {
                 </div>
             </header>
         </>
-
     );
 }
 
