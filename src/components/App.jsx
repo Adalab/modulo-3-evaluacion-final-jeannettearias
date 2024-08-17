@@ -1,5 +1,6 @@
 import '../styles/App.scss';
 import '../styles/layout/_header.scss';
+import Header from './layout/Header';
 
 function App() {
   return (
@@ -16,12 +17,8 @@ function App() {
       
       CHARACTERDETAIL */}
 
-      <header className='darkmode'>
-        <div>
-          <img
-            className='header__img'
-            src="/img/harry-potter-logo-32524.png" alt="harry-potter-logo" />
-        </div>
+      <header>
+        <Header />
       </header>
 
       <main className='main'>
@@ -59,5 +56,4 @@ function App() {
     </>
   )
 }
-
 export default App;

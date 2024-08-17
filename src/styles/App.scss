@@ -6,6 +6,11 @@
   background-color: grey;
 }
 
-main {
+.main {
   color: whitesmoke;
+  display: flex;
+
+  .filter__section {
+    display: flex;
+  }
 }
