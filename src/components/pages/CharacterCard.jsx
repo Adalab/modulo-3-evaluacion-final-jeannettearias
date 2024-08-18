@@ -2,12 +2,6 @@ import PropTypes from 'prop-types';
 import { translateSpecie } from '../services/SpecieTranslation';
 
 function CharacterCard({ character }) {
-    //global variables
-
-
-
-    //translation
-
 
     return (
         <div className="details">

@@ -1,6 +1,6 @@
 import '../../styles/layout/_cardsSearch.scss';
 
-function CardsSearch() {
+function CharacterFilter() {
 
     //global variables
 
@@ -31,4 +31,4 @@ function CardsSearch() {
     );
 }
 
-export default CardsSearch;
+export default CharacterFilter;

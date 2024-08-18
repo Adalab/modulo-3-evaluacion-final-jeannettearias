@@ -1,22 +1,21 @@
-import '../../styles/layout/_filters.scss'
+import '../../styles/layout/_filters.scss';
+import PropTypes from 'prop-types';
 
-function Filters({ houseFilter, handleChangeHouse }) {
-
+function HouseFilter({ houseFilter, handleChangeHouse }) {
     //events and functions
-    const handleChangeGenderFilter = (ev) => {
+    const handleChangeHouseFilter = (ev) => {
         handleChangeHouse(ev.currentTarget.value);
 
     };
     return (
         <>
-
             <section className='filter__section'>
                 <form className='form'>
                     <div>
                         <label className='form__label'>Selecciona la casa: </label>
                         <select className='form__select'
                             name="house" id="house"
-                            onChange={handleChangeGenderFilter}
+                            onChange={handleChangeHouseFilter}
                             value={houseFilter}>
                             <option className='filter__house' value="All">All</option>
                             <option className='filter__house' value="Gryffindor">Gryffindor</option>
@@ -30,5 +29,8 @@ function Filters({ houseFilter, handleChangeHouse }) {
         </>
     );
 }
-
-export default Filters;
+HouseFilter.propType = {
+    houseFilter: PropTypes.string.isRequired,
+    handleChangeHouse: PropTypes.func.isRequired,
+};
+export default HouseFilter;

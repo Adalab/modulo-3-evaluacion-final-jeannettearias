@@ -1,23 +1,29 @@
 import '../styles/App.scss';
 import '../styles/layout/_header.scss';
 import Header from './layout/Header';
-import Filters from './pages/Filters';
+import HouseFilter from './pages/HouseFilter';
 import CharacterList from './pages/CharacterList';
 import CharacterDetail from './pages/CharacterDetail';
-import CardsSearch from './pages/CardsSearch';
+import CardsSearch from './pages/CharacterFilter';
 import Footer from './layout/Footer';
 
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 function App() {
 
   //global variables
   const [characters, setCharacters] = useState([]);
-  const [houseFilter, setHouseFilter] = useState('all');
+  const [houseFilter, setHouseFilter] = useState('All');
+  const imageNotFound = 'https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter'
 
 
   //code when the page load
+
+  //Code if there is no imagen
+  if (characters.image === undefined) {
+    characters.image = imageNotFound;
+
+  }
 
   useEffect(() => {
     fetch('https://hp-api.onrender.com/api/characters')
@@ -41,6 +47,7 @@ function App() {
       });
   }
 
+
   //HTML code
   return (
     <>
@@ -51,7 +58,7 @@ function App() {
       <main className='main'>
         <section>
           <CardsSearch />
-          <Filters
+          <HouseFilter
             characters={characters}
             houseFilter={houseFilter}
             handleChangeHouse={handleChangeHouse} />
@@ -69,9 +76,5 @@ function App() {
     </>
   )
 }
-
-App.propTypes = {
-  characters: PropTypes.array.isRequired
-};
 
 export default App;

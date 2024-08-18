@@ -3,12 +3,6 @@ import CharacterCard from "./CharacterCard";
 
 function CharacterList({ characters }) {
 
-    //global variables
-
-    //events and functions
-
-
-    //HTML code
     return (
 
         <section>
