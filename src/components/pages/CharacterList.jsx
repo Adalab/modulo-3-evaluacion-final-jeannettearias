@@ -6,11 +6,7 @@ function CharacterList({ characters }) {
     //global variables
 
     //events and functions
-    if (characters.length === 0) {
-        return (
-            <p>No hay Personajes para mostrar</p>
-        )
-    }
+
 
     //HTML code
     return (
@@ -26,7 +22,6 @@ function CharacterList({ characters }) {
         </section>
     );
 }
-
 
 CharacterList.propTypes = {
     characters: PropTypes.array.isRequired,

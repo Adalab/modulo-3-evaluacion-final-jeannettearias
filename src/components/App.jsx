@@ -14,26 +14,32 @@ function App() {
 
   //global variables
   const [characters, setCharacters] = useState([]);
+  const [houseFilter, setHouseFilter] = useState('all');
 
 
   //code when the page load
-
-
 
   useEffect(() => {
     fetch('https://hp-api.onrender.com/api/characters')
       .then(response => response.json())
       .then(responseData => {
 
-        console.log(responseData);
         setCharacters(responseData);
-
       });
   }, []);
 
   //events and functions
+  const handleChangeHouse = (house) => {
+    setHouseFilter(house);
 
+    fetch('https://hp-api.onrender.com/api/characters/house/' + house)
+      .then((response) => response.json())
+      .then((responseData) => {
 
+        setCharacters(responseData);
+
+      });
+  }
 
   //HTML code
   return (
@@ -45,9 +51,12 @@ function App() {
       <main className='main'>
         <section>
           <CardsSearch />
-          <Filters />
-          <CharacterList characters={characters} />
-
+          <Filters
+            characters={characters}
+            houseFilter={houseFilter}
+            handleChangeHouse={handleChangeHouse} />
+          <CharacterList
+            characters={characters} />
         </section>
         <section>
           <CharacterDetail />

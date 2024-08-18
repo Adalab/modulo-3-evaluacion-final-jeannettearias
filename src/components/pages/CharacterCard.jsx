@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
+import { translateSpecie } from '../services/SpecieTranslation';
+
 function CharacterCard({ character }) {
     //global variables
+
 
 
     //translation
@@ -15,7 +18,7 @@ function CharacterCard({ character }) {
             />
             <div>
                 <h3 className="card__title">{character.name}</h3>
-                <p className="card__description">{character.species}</p>
+                <p className="card__description">{translateSpecie(character.species)}</p>
             </div>
         </div>
     );
