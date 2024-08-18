@@ -6,23 +6,33 @@ import CharacterList from './pages/CharacterList';
 import CharacterDetail from './pages/CharacterDetail';
 import CardsSearch from './pages/CardsSearch';
 import Footer from './layout/Footer';
-import CharacterCard from './pages/CharacterCard';
 
-import { useState } from 'react';
-import charactersJson from './services/characters.json';
-
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 function App() {
 
   //global variables
-  const [characters, setCharacters] = useState(charactersJson);
-
+  const [characters, setCharacters] = useState([]);
 
 
   //code when the page load
 
 
+
+  useEffect(() => {
+    fetch('https://hp-api.onrender.com/api/characters')
+      .then(response => response.json())
+      .then(responseData => {
+
+        console.log(responseData);
+        setCharacters(responseData);
+
+      });
+  }, []);
+
   //events and functions
+
 
 
   //HTML code
@@ -36,7 +46,6 @@ function App() {
         <section>
           <CardsSearch />
           <Filters />
-
           <CharacterList characters={characters} />
 
         </section>
@@ -51,4 +60,9 @@ function App() {
     </>
   )
 }
+
+App.propTypes = {
+  characters: PropTypes.array.isRequired
+};
+
 export default App;

@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 function CharacterCard({ character }) {
     //global variables
 
@@ -20,5 +20,8 @@ function CharacterCard({ character }) {
         </div>
     );
 }
+CharacterCard.propTypes = {
+    character: PropTypes.object.isRequired
+};
 
 export default CharacterCard;
