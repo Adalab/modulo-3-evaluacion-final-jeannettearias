@@ -2,11 +2,13 @@ import '../../styles/layout/_filters.scss';
 import PropTypes from 'prop-types';
 
 function HouseFilter({ houseFilter, handleChangeHouse }) {
+
     //events and functions
     const handleChangeHouseFilter = (ev) => {
         handleChangeHouse(ev.currentTarget.value);
 
     };
+
     return (
         <>
             <section className='filter__section'>
@@ -14,7 +16,8 @@ function HouseFilter({ houseFilter, handleChangeHouse }) {
                     <div>
                         <label className='form__label'>Selecciona la casa: </label>
                         <select className='form__select'
-                            name="house" id="house"
+                            name="house"
+                            id="house"
                             onChange={handleChangeHouseFilter}
                             value={houseFilter}>
                             <option className='filter__house' value="All">All</option>

@@ -12,5 +12,25 @@ export const translateSpecie = (specie) => {
     else {
         return 'Otro';
     }
-}
+};
+export const translateGender = (gender) => {
+    if (gender === 'Woman') {
+        return 'Mujer';
+    }
+    else {
+        return 'Hombre';
+    }
+};
+
+export const translateStatus = (alive) => {
+    if (alive === true) {
+        return 'Vivo/a';
+    }
+    else {
+        return 'Muerto/a';
+    }
+};
+
+
+
 

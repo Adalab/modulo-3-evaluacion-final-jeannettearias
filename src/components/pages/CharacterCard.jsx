@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
-import { translateSpecie } from '../services/SpecieTranslation';
+import { translateSpecie } from '../services/Translation';
 
 function CharacterCard({ character }) {
-
     return (
-        <div className="details">
+        <Link to={`/detail/ ${character.id}`} className="details">
             <img src={character.image}
                 className='card__img'
                 alt={`Picture of + ${character.name}`}
@@ -14,7 +15,7 @@ function CharacterCard({ character }) {
                 <h3 className="card__title">{character.name}</h3>
                 <p className="card__description">{translateSpecie(character.species)}</p>
             </div>
-        </div>
+        </Link>
     );
 }
 CharacterCard.propTypes = {

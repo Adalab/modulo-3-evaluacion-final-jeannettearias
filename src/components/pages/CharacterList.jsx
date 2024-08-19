@@ -3,8 +3,13 @@ import CharacterCard from "./CharacterCard";
 
 function CharacterList({ characters }) {
 
-    return (
+    if (characters.length === 0) {
+        return (
+            <p>No existen personajes asociados a la búsqueda</p>
+        )
+    }
 
+    return (
         <section>
             <ul className='cards' >
                 {characters.map((character) => (
