@@ -33,7 +33,7 @@ function HouseFilter({ houseFilter, handleChangeHouse }) {
     );
 }
 HouseFilter.propType = {
-    houseFilter: PropTypes.string.isRequired,
+    houseFilter: PropTypes.func.isRequired,
     handleChangeHouse: PropTypes.func.isRequired,
 };
 export default HouseFilter;

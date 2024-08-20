@@ -32,9 +32,6 @@ function CharacterDetail({ findCharacter }) {
 }
 
 CharacterDetail.propTypes = {
-    findCharacter: PropTypes.func,
-    translateGender: PropTypes.string,
-    translateSpecie: PropTypes.string,
-    translateStatus: PropTypes.string,
+    findCharacter: PropTypes.func.isRequired,
 }
 export default CharacterDetail;

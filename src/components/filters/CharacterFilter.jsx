@@ -1,17 +1,16 @@
 import '../../styles/layout/_cardsSearch.scss';
+import PropTypes from 'prop-types';
 
-function CharacterFilter() {
+function CharacterFilter({ searchInput, handleChangeCharacterFilter }) {
 
-    //global variables
+    //handle the input change
+    const handleInputChange = (ev) => {
+        const newValue = ev.target.value;
 
+        //trigger the search whenever the input changes
+        handleChangeCharacterFilter(newValue);
 
-
-    //code when the page load
-
-
-    //Search events and functions
-
-
+    };
 
     //HTML code
     return (
@@ -19,10 +18,12 @@ function CharacterFilter() {
             <section className="search__section">
                 <form className='form'>
                     <div>
-                        <label className='form__label'
-                        >Busca por personaje: </label>
+                        <label className='form__label'>Busca por personaje: </label>
                         <input className='form__input'
-                            type="text" name="search" id="search" />
+                            type="text"
+                            name="search" id="search"
+                            value={searchInput}
+                            onChange={handleInputChange} />
                     </div>
                 </form>
             </section>
@@ -30,5 +31,9 @@ function CharacterFilter() {
 
     );
 }
+CharacterFilter.propTypes = {
+    handleChangeCharacterFilter: PropTypes.func.isRequired,
+    searchInput: PropTypes.string.isRequired,
+};
 
 export default CharacterFilter;
