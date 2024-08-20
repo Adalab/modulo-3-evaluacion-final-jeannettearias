@@ -8,8 +8,8 @@ function CharacterCard({ character }) {
         <Link to={`/detail/ ${character.id}`} className="details">
             <img src={character.image}
                 className='card__img'
-                alt={`Picture of + ${character.name}`}
-                title={`Picture of + ${character.name}`}
+                alt={`Picture of ${character.name}`}
+                title={`Picture of ${character.name}`}
             />
             <div>
                 <h3 className="card__title">{character.name}</h3>

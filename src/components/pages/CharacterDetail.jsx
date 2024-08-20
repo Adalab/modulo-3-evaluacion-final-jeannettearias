@@ -15,16 +15,18 @@ function CharacterDetail({ findCharacter }) {
                 <div>
                     <img src={characterToShow.image}
                         className='cardDetail__img'
-                        alt={`Picture of + ${characterToShow.name}`}
-                        title={`Picture of + ${characterToShow.name}`} />
+                        alt={`Picture of ${characterToShow.name}`}
+                        title={`Picture of ${characterToShow.name}`} />
                 </div>
-                <div>
-                    <p className="cardDetail__description">{characterToShow.name}</p>
-                    <p className="cardDetail__description">{translateStatus(characterToShow.alive)}</p>
-                    <p className="cardDetail__description">{translateSpecie(characterToShow.species)}</p>
-                    <p className="cardDetail__description">{translateGender(characterToShow.gender)}</p>
-                    <p className="cardDetail__description">{characterToShow.house}</p>
-                </div>
+                <form className="cardDetail__form">
+                    <div>
+                        <p className="cardDetail__description">{characterToShow.name}</p>
+                        <p className="cardDetail__description">{translateStatus(characterToShow.alive)}</p>
+                        <p className="cardDetail__description">{translateSpecie(characterToShow.species)}</p>
+                        <p className="cardDetail__description">{translateGender(characterToShow.gender)}</p>
+                        <p className="cardDetail__description">{characterToShow.house}</p>
+                    </div>
+                </form>
                 <Link to='/'>Volver</Link>
             </div>
         </>
@@ -32,6 +34,9 @@ function CharacterDetail({ findCharacter }) {
 }
 
 CharacterDetail.propTypes = {
-    findCharacter: PropTypes.func.isRequired,
+    findCharacter: PropTypes.func,
+    translateGender: PropTypes.string,
+    translateSpecie: PropTypes.string,
+    translateStatus: PropTypes.string,
 }
 export default CharacterDetail;

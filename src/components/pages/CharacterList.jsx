@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import CharacterCard from "./CharacterCard";
 
-function CharacterList({ characters }) {
+function CharacterList({ characters, searchWord }) {
 
     if (characters.length === 0) {
         return (
-            <p>No existen personajes asociados a la búsqueda</p>
+            <p>No hay ningún personaje que coincida con la palabra: {searchWord}</p>
         )
     }
 
@@ -24,6 +24,7 @@ function CharacterList({ characters }) {
 
 CharacterList.propTypes = {
     characters: PropTypes.array.isRequired,
+    searchWord: PropTypes.string.isRequired,
 };
 
 export default CharacterList;

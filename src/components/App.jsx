@@ -13,7 +13,7 @@ function App() {
 
   //global variables
   const [characters, setCharacters] = useState([]);
-  const [houseFilter, setHouseFilter] = useState('All');
+  const [houseFilter, setHouseFilter] = useState('Gryffindor');
   const [searchInput, setSearchInput] = useState('');
 
   const imageNotFound = 'https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter'
@@ -82,7 +82,6 @@ function App() {
             searchInput={searchInput}
             filteredCharacters={filteredCharacters}
             handleChangeCharacterFilter={handleChangeCharacterFilter}
-
             houseFilter={houseFilter}
             handleChangeHouse={handleChangeHouse} />} />
           <Route path='/detail/:id'

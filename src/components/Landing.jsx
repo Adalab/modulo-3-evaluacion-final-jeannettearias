@@ -18,7 +18,9 @@ function Landing({ filteredCharacters, houseFilter, handleChangeHouse, searchInp
                     handleChangeHouse={handleChangeHouse} />
             </section>
             <section className='characters'>
-                <CharacterList characters={filteredCharacters}
+                <CharacterList
+                    characters={filteredCharacters}
+                    searchWord={searchInput}
                 />
             </section>
         </>

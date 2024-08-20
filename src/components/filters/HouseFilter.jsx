@@ -1,8 +1,8 @@
 import '../../styles/layout/_filters.scss';
 import PropTypes from 'prop-types';
 
-
 function HouseFilter({ houseFilter, handleChangeHouse }) {
+
 
     //events and functions
     const handleChangeHouseFilter = (ev) => {
