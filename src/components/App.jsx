@@ -18,18 +18,19 @@ function App() {
 
   const imageNotFound = 'https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter'
 
-  //Code if there is no imagen
-  if (characters.image === undefined) {
-    characters.image = imageNotFound;
-
-  }
   //code when the page load
   useEffect(() => {
     fetch('https://hp-api.onrender.com/api/characters')
       .then(response => response.json())
       .then(responseData => {
-        setCharacters(responseData);
+        const processedCharacters = responseData.map(character => ({
+          ...character,
+          image: character.image ? character.image : imageNotFound
+        }));
+
+        setCharacters(processedCharacters);
       });
+
   }, []);
 
   //events and functions - House filter

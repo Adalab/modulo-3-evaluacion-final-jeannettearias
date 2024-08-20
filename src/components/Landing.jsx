@@ -22,6 +22,7 @@ function Landing({ filteredCharacters, houseFilter, handleChangeHouse, searchInp
                 />
             </section>
         </>
+
     )
 }
 Landing.propTypes = {

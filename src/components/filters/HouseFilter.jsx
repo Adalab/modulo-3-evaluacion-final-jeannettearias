@@ -1,6 +1,7 @@
 import '../../styles/layout/_filters.scss';
 import PropTypes from 'prop-types';
 
+
 function HouseFilter({ houseFilter, handleChangeHouse }) {
 
     //events and functions
@@ -32,8 +33,8 @@ function HouseFilter({ houseFilter, handleChangeHouse }) {
         </>
     );
 }
-HouseFilter.propType = {
-    houseFilter: PropTypes.func.isRequired,
+HouseFilter.propTypes = {
+    houseFilter: PropTypes.string.isRequired,
     handleChangeHouse: PropTypes.func.isRequired,
 };
 export default HouseFilter;
