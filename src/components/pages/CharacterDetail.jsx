@@ -5,26 +5,30 @@ import { translateGender, translateSpecie, translateStatus } from '../services/T
 function CharacterDetail({ findCharacter }) {
     //events and functions
     const params = useParams();
-
     const characterToShow = findCharacter(params.id);
+
+    if (characterToShow !== undefined) {
+        localStorage.setItem('character', JSON.stringify(characterToShow));
+    }
+    const getCharacter = JSON.parse(localStorage.getItem('character'));
 
     //HTML code
     return (
         <>
             <div>
                 <div>
-                    <img src={characterToShow.image}
+                    <img src={getCharacter.image}
                         className='cardDetail__img'
-                        alt={`Picture of ${characterToShow.name}`}
-                        title={`Picture of ${characterToShow.name}`} />
+                        alt={`Picture of ${getCharacter.name}`}
+                        title={`Picture of ${getCharacter.name}`} />
                 </div>
                 <form className="cardDetail__form">
                     <div>
-                        <p className="cardDetail__description">{characterToShow.name}</p>
-                        <p className="cardDetail__description">{translateStatus(characterToShow.alive)}</p>
-                        <p className="cardDetail__description">{translateSpecie(characterToShow.species)}</p>
-                        <p className="cardDetail__description">{translateGender(characterToShow.gender)}</p>
-                        <p className="cardDetail__description">{characterToShow.house}</p>
+                        <p className="cardDetail__description">{getCharacter.name}</p>
+                        <p className="cardDetail__description">{translateStatus(getCharacter.alive)}</p>
+                        <p className="cardDetail__description">{translateSpecie(getCharacter.species)}</p>
+                        <p className="cardDetail__description">{translateGender(getCharacter.gender)}</p>
+                        <p className="cardDetail__description">{getCharacter.house}</p>
                     </div>
                 </form>
                 <Link to='/'>Volver</Link>
