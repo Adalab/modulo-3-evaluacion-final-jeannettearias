@@ -11,7 +11,7 @@ function CharacterCard({ character }) {
                 alt={`Picture of ${character.name}`}
                 title={`Picture of ${character.name}`}
             />
-            <div>
+            <div className='card__list__container'>
                 <h3 className="card__title">{character.name}</h3>
                 <p className="card__description">{translateSpecie(character.species)}</p>
             </div>

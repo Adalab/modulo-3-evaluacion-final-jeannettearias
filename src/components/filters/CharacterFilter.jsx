@@ -16,18 +16,16 @@ function CharacterFilter({ searchInput, handleChangeCharacterFilter }) {
     //HTML code
     return (
         <>
-            <section className="filters__section">
-                <form className='form'>
-                    <div>
-                        <label className='form__label'>Busca por personaje: </label>
-                        <input className='form__input'
-                            type="text"
-                            name="search" id="search"
-                            value={searchInput}
-                            onChange={handleInputChange} />
-                    </div>
-                </form>
-            </section>
+            <form className='form__input'>
+                <div>
+                    <label className='form__label'>Busca por personaje: </label>
+                    <input className='form__input'
+                        type="text"
+                        name="search" id="search"
+                        value={searchInput}
+                        onChange={handleInputChange} />
+                </div>
+            </form>
         </>
 
     );

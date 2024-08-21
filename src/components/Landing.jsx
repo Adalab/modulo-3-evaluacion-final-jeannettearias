@@ -10,20 +10,22 @@ function Landing({ filteredCharacters, houseFilter, handleChangeHouse, searchInp
 
     return (
         <>
-            <section className='landing'>
-                <CharacterFilter
-                    searchInput={searchInput}
-                    handleChangeCharacterFilter={handleChangeCharacterFilter} />
-                <HouseFilter
-                    houseFilter={houseFilter}
-                    handleChangeHouse={handleChangeHouse} />
-            </section>
-            <section className='landing'>
-                <CharacterList
-                    characters={filteredCharacters}
-                    searchWord={searchInput}
-                />
-            </section>
+            <div className='landing'>
+                <section className='filters__section'>
+                    <CharacterFilter
+                        searchInput={searchInput}
+                        handleChangeCharacterFilter={handleChangeCharacterFilter} />
+                    <HouseFilter
+                        houseFilter={houseFilter}
+                        handleChangeHouse={handleChangeHouse} />
+                </section>
+                <section className='cards__section'>
+                    <CharacterList
+                        characters={filteredCharacters}
+                        searchWord={searchInput}
+                    />
+                </section>
+            </div>
         </>
 
     )

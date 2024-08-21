@@ -1,33 +1,30 @@
 .landing {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 1rem;
-  color: whitesmoke;
+  color: rgb(255, 217, 217);
 }
-
-.cards {
+.cards__ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  color: whitesmoke;
-  justify-content: center;
-  align-content: center;
-  gap: 1rem; /* Space between the cards */
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.card {
-  background-color: rgba(154, 154, 28, 0.692);
+.card__li {
   border: none;
-  width: 20rem;
-  height: 18rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  margin: 2rem;
+  margin-bottom: 1rem;
+
+  display: flex; /* Make the card a flex container */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
   text-align: center; /* Center text within the card */
 }
 
-.card a {
+.card__li a {
   text-decoration: none; /* Remove underline from links */
+}
+.card__list__container {
+  background-color: rgba(154, 154, 28, 0.692);
 }
 
 .card__title,
@@ -52,14 +49,9 @@
   margin: 0 auto;
 }
 
-@media (min-width: 660px) {
-  .landing {
-    width: 100%;
-    grid-template-columns: 9em 1fr;
-
-    .form__label {
-      padding-bottom: 1rem;
-      margin: 5rem;
-    }
+@media (max-width: 660px) {
+  .cards__ul {
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns in mobile view */
+    gap: 0.5rem; /* Adjust the gap between cards for mobile if necessary */
   }
 }

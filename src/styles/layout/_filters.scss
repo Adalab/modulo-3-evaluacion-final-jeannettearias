@@ -1,31 +1,20 @@
 .filters__section {
   display: grid;
-  grid-template-rows: 2rem 1rem;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 1rem; /* Add some padding around the section */
+}
 
-  .form {
-    padding-right: 1rem;
+@media (min-width: 660px) {
+  .filters__section {
+    flex-direction: row; /* Arrange items in a row on larger screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem; /* Space between the input and select */
   }
-}
 
-.form__label {
-  color: whitesmoke;
-  padding-right: 3rem;
-}
-
-.form__input {
-  background-color: grey;
-  font-size: 16px;
-  color: whitesmoke;
-  border: solid rgba(154, 154, 28, 0.692);
-  width: 18rem;
-  height: 1.7rem;
-}
-
-.form__select {
-  background-color: grey;
-  font-size: 16px;
-  color: whitesmoke;
-  border: solid rgba(154, 154, 28, 0.692);
-  width: 19rem;
-  height: 2.1rem;
+  .form__input,
+  .form__select,
+  .filter__house {
+    max-width: 18rem; /* Adjust max-width for larger screens */
+    text-align: center; /* Center text within input/select */
+  }
 }

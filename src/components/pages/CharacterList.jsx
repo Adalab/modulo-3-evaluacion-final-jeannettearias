@@ -12,17 +12,16 @@ function CharacterList({ characters, searchWord }) {
     }
 
     return (
-        <section className='filter__section'>
-            <form className='form'>
-                <ul className='cards'>
-                    {characters.map((character) => (
-                        <li key={character.id} className="card">
-                            <CharacterCard character={character} />
-                        </li>
-                    ))}
-                </ul>
-            </form>
-        </section>
+        <form className='form'>
+            <ul className='cards__ul'>
+                {characters.map((character) => (
+                    <li key={character.id} className="card__li">
+                        <CharacterCard character={character} />
+                    </li>
+                ))}
+            </ul>
+        </form>
+
     );
 }
 

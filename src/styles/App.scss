@@ -1,6 +1,7 @@
 @import "./core/reset";
 @import "./core/variables";
 @import "./layout/_header";
+@import "./layout/landing";
 
 :root {
   background-color: grey;
@@ -8,7 +9,8 @@
 }
 
 .main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   color: whitesmoke;
   align-items: center;
