@@ -4,30 +4,12 @@
 
 :root {
   background-color: grey;
+  color: whitesmoke;
 }
 
 .main {
-  display: flex;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  color: whitesmoke;
+  display: grid;
   justify-content: center;
-}
-
-.form {
-  &__section {
-    width: 300px;
-    margin-inline: auto;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: 5em 1fr;
-
-    @media (min-width: 660px) {
-      width: 100%;
-      grid-template-columns: 9em 1fr;
-    }
-    .form__label {
-      display: block;
-    }
-  }
+  color: whitesmoke;
+  align-items: center;
 }

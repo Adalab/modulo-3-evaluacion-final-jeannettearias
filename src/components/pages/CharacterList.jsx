@@ -1,3 +1,5 @@
+import '../../styles/layout/_filters.scss';
+import '../../styles/layout/_landing.scss';
 import PropTypes from 'prop-types';
 import CharacterCard from "./CharacterCard";
 
@@ -10,14 +12,16 @@ function CharacterList({ characters, searchWord }) {
     }
 
     return (
-        <section>
-            <ul className='cards' >
-                {characters.map((character) => (
-                    <li key={character.id} className="card">
-                        <CharacterCard character={character} />
-                    </li>
-                ))}
-            </ul>
+        <section className='filter__section'>
+            <form className='form'>
+                <ul className='cards'>
+                    {characters.map((character) => (
+                        <li key={character.id} className="card">
+                            <CharacterCard character={character} />
+                        </li>
+                    ))}
+                </ul>
+            </form>
         </section>
     );
 }

@@ -14,7 +14,7 @@ export const translateSpecie = (specie) => {
     }
 };
 export const translateGender = (gender) => {
-    if (gender === 'Woman') {
+    if (gender === 'female') {
         return 'Mujer';
     }
     else {

@@ -1,0 +1,70 @@
+.detail__section {
+  align-items: center;
+  height: 22rem;
+  width: 35rem;
+  color: whitesmoke;
+}
+.form__detail {
+  display: flex;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card__detail {
+  display: flex;
+  padding: 1rem;
+  background-color: rgb(110, 27, 27);
+  justify-content: center;
+}
+
+.cardDetail__img {
+  width: 15rem;
+  height: 20rem;
+}
+
+.cardDetail__description {
+  margin-inline: auto;
+  color: whitesmoke;
+  justify-content: left;
+  align-content: center;
+  font-size: 18px;
+}
+
+.back__btn {
+  position: fixed;
+  top: 8rem; /* Distance from the top of the viewport */
+  right: 5rem; /* Distance from the right side of the viewport */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Remove underline if it's a link */
+  font-size: 16px; /* Font size */
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Optional: Add hover effect */
+.back__btn__style:hover {
+  background-color: #797c75b6;
+}
+
+.back__btn__style {
+  color: whitesmoke;
+}
+
+.detail__section {
+  @media (min-width: 660px) {
+    max-width: 100%;
+    grid-template-columns: 9em 1fr;
+  }
+  .form__label {
+    display: block;
+  }
+}

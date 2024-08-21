@@ -1,4 +1,5 @@
-import '../../styles/layout/_cardsSearch.scss';
+import '../../styles/layout/_landing.scss';
+import '../../styles/layout/_filters.scss';
 import PropTypes from 'prop-types';
 
 function CharacterFilter({ searchInput, handleChangeCharacterFilter }) {
@@ -15,7 +16,7 @@ function CharacterFilter({ searchInput, handleChangeCharacterFilter }) {
     //HTML code
     return (
         <>
-            <section className="search__section">
+            <section className="filters__section">
                 <form className='form'>
                     <div>
                         <label className='form__label'>Busca por personaje: </label>

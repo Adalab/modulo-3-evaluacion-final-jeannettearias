@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { translateGender, translateSpecie, translateStatus } from '../services/Translation'
+import '../../styles/layout/_characterDetail.scss';
 
 function CharacterDetail({ findCharacter }) {
     //events and functions
@@ -15,24 +16,29 @@ function CharacterDetail({ findCharacter }) {
     //HTML code
     return (
         <>
-            <div>
-                <div>
-                    <img src={getCharacter.image}
-                        className='cardDetail__img'
-                        alt={`Picture of ${getCharacter.name}`}
-                        title={`Picture of ${getCharacter.name}`} />
-                </div>
-                <form className="cardDetail__form">
-                    <div>
-                        <p className="cardDetail__description">{getCharacter.name}</p>
-                        <p className="cardDetail__description">{translateStatus(getCharacter.alive)}</p>
-                        <p className="cardDetail__description">{translateSpecie(getCharacter.species)}</p>
-                        <p className="cardDetail__description">{translateGender(getCharacter.gender)}</p>
-                        <p className="cardDetail__description">{getCharacter.house}</p>
+            <section className="detail__section">
+                <div className="card__detail">
+                    <div >
+                        <img src={getCharacter.image}
+                            className='cardDetail__img'
+                            alt={`Picture of ${getCharacter.name}`}
+                            title={`Picture of ${getCharacter.name}`} />
                     </div>
-                </form>
-                <Link to='/'>Volver</Link>
-            </div>
+                    <form className="form__detail">
+                        <div>
+                            <p className="cardDetail__description name">{getCharacter.name}</p>
+                            <p className="cardDetail__description ">Estado: {translateStatus(getCharacter.alive)}</p>
+                            <p className="cardDetail__description">Especie: {translateSpecie(getCharacter.species)}</p>
+                            <p className="cardDetail__description">Género: {translateGender(getCharacter.gender)}</p>
+                            <p className="cardDetail__description">Casa: {getCharacter.house}</p>
+                        </div>
+                    </form>
+
+                </div>
+                <div className="back__btn">
+                    <Link className="back__btn__style" to='/'> <span><i className="fa-solid fa-backward"></i></span>Volver</Link>
+                </div>
+            </section>
         </>
     );
 }

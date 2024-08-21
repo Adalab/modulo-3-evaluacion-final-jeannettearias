@@ -1,16 +1,31 @@
-.filter__section {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2rem;
+.filters__section {
+  display: grid;
+  grid-template-rows: 2rem 1rem;
 
-  .form__label {
-    width: 20rem;
-    height: 2rem;
-    margin-right: 1.8rem;
+  .form {
+    padding-right: 1rem;
   }
+}
 
-  .form__select {
-    width: 18.5rem;
-    height: 2rem;
-  }
+.form__label {
+  color: whitesmoke;
+  padding-right: 3rem;
+}
+
+.form__input {
+  background-color: grey;
+  font-size: 16px;
+  color: whitesmoke;
+  border: solid rgba(154, 154, 28, 0.692);
+  width: 18rem;
+  height: 1.7rem;
+}
+
+.form__select {
+  background-color: grey;
+  font-size: 16px;
+  color: whitesmoke;
+  border: solid rgba(154, 154, 28, 0.692);
+  width: 19rem;
+  height: 2.1rem;
 }

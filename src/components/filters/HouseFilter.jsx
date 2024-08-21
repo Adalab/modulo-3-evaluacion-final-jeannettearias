@@ -1,4 +1,5 @@
 import '../../styles/layout/_filters.scss';
+import '../../styles/layout/_landing.scss';
 import PropTypes from 'prop-types';
 
 function HouseFilter({ houseFilter, handleChangeHouse }) {
@@ -12,7 +13,7 @@ function HouseFilter({ houseFilter, handleChangeHouse }) {
 
     return (
         <>
-            <section className='filter__section'>
+            <section className='filters__section'>
                 <form className='form'>
                     <div>
                         <label className='form__label'>Selecciona la casa: </label>
