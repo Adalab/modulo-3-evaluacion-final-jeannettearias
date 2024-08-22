@@ -9,10 +9,11 @@ function CharacterDetail({ findCharacter }) {
     const params = useParams();
     const characterToShow = findCharacter(params.id);
 
-    if (characterToShow !== undefined) {
-        localStorage.setItem('character', JSON.stringify(characterToShow));
+    if (characterToShow === undefined) {
+        return (
+            <p className='p__text'>El personaje que buscas no existe</p>
+        )
     }
-    const getCharacter = JSON.parse(localStorage.getItem('character'));
 
     //HTML code
     return (
@@ -20,18 +21,18 @@ function CharacterDetail({ findCharacter }) {
             <section className="detail__section">
                 <div className="card__detail">
                     <div >
-                        <img src={getCharacter.image}
+                        <img src={characterToShow.image}
                             className='cardDetail__img'
-                            alt={`Picture of ${getCharacter.name}`}
-                            title={`Picture of ${getCharacter.name}`} />
+                            alt={`Picture of ${characterToShow.name}`}
+                            title={`Picture of ${characterToShow.name}`} />
                     </div>
                     <form className="form__detail">
                         <div>
-                            <p className="cardDetail__description name">{getCharacter.name}</p>
-                            <p className="cardDetail__description ">Estado: {translateStatus(getCharacter.alive)}</p>
-                            <p className="cardDetail__description">Especie: {translateSpecie(getCharacter.species)}</p>
-                            <p className="cardDetail__description">Género: {translateGender(getCharacter.gender)}</p>
-                            <p className="cardDetail__description">Casa: {getCharacter.house}</p>
+                            <p className="cardDetail__description name">{characterToShow.name}</p>
+                            <p className="cardDetail__description ">Estado: {translateStatus(characterToShow.alive)}</p>
+                            <p className="cardDetail__description">Especie: {translateSpecie(characterToShow.species)}</p>
+                            <p className="cardDetail__description">Género: {translateGender(characterToShow.gender)}</p>
+                            <p className="cardDetail__description">Casa: {characterToShow.house}</p>
                         </div>
                     </form>
 

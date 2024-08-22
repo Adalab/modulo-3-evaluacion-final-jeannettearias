@@ -17,17 +17,14 @@ function CharacterFilter({ searchInput, handleChangeCharacterFilter }) {
     return (
         <>
             <form className='form__input'>
-                <div>
-                    <label className='form__label'>Busca por personaje: </label>
-                    <input className='form__input'
-                        type="text"
-                        name="search" id="search"
-                        value={searchInput}
-                        onChange={handleInputChange} />
-                </div>
+                <label className='form__label'>Busca por personaje: </label>
+                <input className='form__input'
+                    type="text"
+                    name="search" id="search"
+                    value={searchInput}
+                    onChange={handleInputChange} />
             </form>
         </>
-
     );
 }
 CharacterFilter.propTypes = {

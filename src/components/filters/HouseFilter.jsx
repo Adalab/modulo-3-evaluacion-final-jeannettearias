@@ -14,20 +14,18 @@ function HouseFilter({ houseFilter, handleChangeHouse }) {
     return (
         <>
             <form className='form__select'>
-                <div>
-                    <label className='form__label'>Selecciona la casa: </label>
-                    <select className='form__select'
-                        name="house"
-                        id="house"
-                        onChange={handleChangeHouseFilter}
-                        value={houseFilter}>
-                        <option className='filter__house' value="All">All</option>
-                        <option className='filter__house' value="Gryffindor">Gryffindor</option>
-                        <option className='filter__house' value="Slytherin">Slytherin</option>
-                        <option className='filter__house' value="Ravenclaw">Ravenclaw</option>
-                        <option className='filter__house' value="Hufflepuff">Hufflepuff</option>
-                    </select>
-                </div>
+                <label className='form__label'>Selecciona la casa: </label>
+                <select className='form__select'
+                    name="house"
+                    id="house"
+                    onChange={handleChangeHouseFilter}
+                    value={houseFilter}>
+                    <option className='filter__house' value="All">All</option>
+                    <option className='filter__house' value="Gryffindor">Gryffindor</option>
+                    <option className='filter__house' value="Slytherin">Slytherin</option>
+                    <option className='filter__house' value="Ravenclaw">Ravenclaw</option>
+                    <option className='filter__house' value="Hufflepuff">Hufflepuff</option>
+                </select>
             </form>
         </>
     );

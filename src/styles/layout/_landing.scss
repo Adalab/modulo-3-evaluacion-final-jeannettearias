@@ -23,7 +23,7 @@
 .cards__ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; /* Space between cards */
+  gap: 1rem;
 }
 
 .card__li {
@@ -57,7 +57,7 @@
 
 .card__description {
   font-size: 11px;
-  margin-bottom: 1rem; /* Add space below the description */
+  margin-bottom: 1rem;
 }
 
 .card__img {
@@ -66,13 +66,10 @@
   height: 20rem;
   margin: 0 auto;
 }
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 660px) {
   .cards__ul {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 2 equal columns on small screens */
+    grid-template-columns: repeat(2, 1fr);
   }
   .card__img {
     display: block;
@@ -84,7 +81,7 @@
 
 @media (max-width: 480px) {
   .cards__ul {
-    grid-template-columns: 1fr; /* 1 column on very small screens */
+    grid-template-columns: 1fr;
   }
   .card__img {
     display: block;

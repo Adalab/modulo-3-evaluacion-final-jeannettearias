@@ -7,7 +7,7 @@ function CharacterList({ characters, searchWord }) {
 
     if (characters.length === 0) {
         return (
-            <p>No hay ningún personaje que coincida con la palabra: {searchWord}</p>
+            <p className='p__text'>No hay ningún personaje que coincida con la palabra: {searchWord}</p>
         )
     }
 
