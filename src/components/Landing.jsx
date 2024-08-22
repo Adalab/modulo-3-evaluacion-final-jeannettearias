@@ -1,9 +1,11 @@
-import PropTypes from 'prop-types';
+import '../styles/layout/_landing.scss';
 
+
+import PropTypes from 'prop-types';
 import HouseFilter from './filters/HouseFilter';
 import CharacterFilter from './filters/CharacterFilter';
 import CharacterList from './pages/CharacterList';
-import '../styles/layout/_landing.scss';
+
 
 function Landing({ filteredCharacters, houseFilter, handleChangeHouse, searchInput, handleChangeCharacterFilter }) {
 

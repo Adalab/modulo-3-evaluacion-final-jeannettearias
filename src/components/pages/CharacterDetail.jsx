@@ -1,7 +1,8 @@
+import '../../styles/layout/_characterDetail.scss';
+
 import { Link, useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { translateGender, translateSpecie, translateStatus } from '../services/Translation'
-import '../../styles/layout/_characterDetail.scss';
 
 function CharacterDetail({ findCharacter }) {
     //events and functions

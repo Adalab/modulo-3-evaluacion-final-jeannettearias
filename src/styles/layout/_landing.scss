@@ -1,27 +1,44 @@
 .landing {
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: rgb(255, 217, 217);
+  gap: 1rem;
 }
+
+.filters__section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.cards__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .cards__ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* Space between cards */
 }
 
 .card__li {
   border: none;
-
-  margin: 2rem;
+  margin: 1rem;
   margin-bottom: 1rem;
-
-  display: flex; /* Make the card a flex container */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  text-align: center; /* Center text within the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .card__li a {
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
 }
 .card__list__container {
   background-color: rgba(154, 154, 28, 0.692);
@@ -35,23 +52,44 @@
 }
 
 .card__title {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .card__description {
-  font-size: 10px;
+  font-size: 11px;
+  margin-bottom: 1rem; /* Add space below the description */
 }
 
 .card__img {
   display: block;
-  width: 10rem;
-  height: 15rem;
+  width: 14rem;
+  height: 20rem;
   margin: 0 auto;
 }
-
+/* Responsive adjustments for smaller screens */
 @media (max-width: 660px) {
   .cards__ul {
-    grid-template-columns: repeat(2, 1fr); /* 2 equal columns in mobile view */
-    gap: 0.5rem; /* Adjust the gap between cards for mobile if necessary */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 equal columns on small screens */
+  }
+  .card__img {
+    display: block;
+    width: 12rem;
+    height: 18rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards__ul {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+  .card__img {
+    display: block;
+    width: 10rem;
+    height: 16rem;
+    margin: 0 auto;
   }
 }

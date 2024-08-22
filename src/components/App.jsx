@@ -1,5 +1,8 @@
 import '../styles/App.scss';
 import '../styles/layout/_header.scss';
+import '../styles/layout/_landing.scss';
+import '../styles/layout/_footer.scss';
+
 import Header from './layout/Header';
 import Landing from './Landing';
 import CharacterDetail from './pages/CharacterDetail';

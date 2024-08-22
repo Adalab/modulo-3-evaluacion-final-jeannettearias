@@ -1,70 +1,55 @@
 .detail__section {
-  align-items: center;
-  height: 22rem;
-  width: 35rem;
-  color: whitesmoke;
-}
-.form__detail {
   display: flex;
-  padding: 4rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.name {
-  font-weight: bold;
-  font-size: 20px;
+  flex-direction: column;
+  align-items: center; /* Center the card horizontally */
+  justify-content: center; /* Center the card vertically */
+  min-height: 100vh; /* Make the section take up the full height of the viewport */
 }
 
 .card__detail {
   display: flex;
-  padding: 1rem;
-  background-color: rgb(110, 27, 27);
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center content inside the card */
+  justify-content: center; /* Center content inside the card */
+  background-color: rgba(103, 17, 4, 0.692); /* Background color for the card */
+  padding: 2rem;
+  border-radius: 1rem; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+  width: 100%;
+  max-width: 500px; /* Control the maximum width of the card */
 }
 
 .cardDetail__img {
-  width: 15rem;
-  height: 20rem;
+  max-width: 100%; /* Make sure the image is responsive */
+  width: 14rem;
+  height: 18rem;
+  margin-bottom: 1rem; /* Space between the image and the text */
 }
 
 .cardDetail__description {
-  margin-inline: auto;
+  margin-bottom: 0.5rem; /* Space between each description item */
   color: whitesmoke;
-  justify-content: left;
-  align-content: center;
-  font-size: 18px;
+  font-size: 1rem; /* Adjust the text size as needed */
+  text-align: center; /* Center the text */
+}
+
+.name {
+  font-weight: bold;
 }
 
 .back__btn {
-  position: fixed;
-  top: 8rem; /* Distance from the top of the viewport */
-  right: 5rem; /* Distance from the right side of the viewport */
-  color: white; /* Text color */
-  border: none; /* Remove default border */
-  padding: 10px 20px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  text-decoration: none; /* Remove underline if it's a link */
-  font-size: 16px; /* Font size */
-  z-index: 1000; /* Ensure it stays on top of other content */
-}
-
-/* Optional: Add hover effect */
-.back__btn__style:hover {
-  background-color: #797c75b6;
+  margin-top: 2rem; /* Space between the card and the back button */
 }
 
 .back__btn__style {
   color: whitesmoke;
-}
-
-.detail__section {
-  @media (min-width: 660px) {
-    max-width: 100%;
-    grid-template-columns: 9em 1fr;
-  }
-  .form__label {
-    display: block;
-  }
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 1rem; /* Adjust the size of the button text */
+  background-color: #444; /* Background color for the button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* Optional: Rounded corners for the button */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow */
 }
