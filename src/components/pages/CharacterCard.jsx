@@ -4,7 +4,7 @@ import '../../styles/layout/_landing.scss';
 import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
-import { translateSpecie } from '../services/Translation';
+import { translateSpecie } from '../../services/Translation';
 
 function CharacterCard({ character }) {
     return (
