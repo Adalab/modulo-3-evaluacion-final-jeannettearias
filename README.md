@@ -1,8 +1,29 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title
 
-Currently, two official plugins are available:
+modulo-3-evaluacion-final-jeannettearias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+
+web page with a list of Harry Potter characters, which we can filter by character name and house.
+
+## Getting Started
+
+N/A
+
+### Dependencies
+
+N/A
+
+### Installing
+
+N/A
+
+### Executing program
+
+N/A
+
+```
+code blocks for commands
+```
