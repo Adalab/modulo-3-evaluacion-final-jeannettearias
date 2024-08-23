@@ -1,54 +1,27 @@
-/*
-.form__input {
-  width: 25rem;
-  height: 2rem;
-  font-size: 16px;
-  margin: 1rem;
-  background-color: grey;
-  color: whitesmoke;
-  border: solid rgba(154, 154, 28, 0.692);
-}
-
-.form__select {
-  width: 25.5rem;
-  height: 2.3rem;
-  font-size: 16px;
-  margin: 1rem;
-  background-color: grey;
-  color: whitesmoke;
-  border: solid rgba(154, 154, 28, 0.692);
-}
-
-.form__label {
-  color: whitesmoke;
-  font-size: 16px;
-  align-items: left;
-}
-.form__select__label {
-  color: whitesmoke;
-  font-size: 16px;
-  text-align: left;
-}
-
-*/
 .form__input,
 .form__select {
-  width: 25rem; /* Set the same width for both input and select */
-  height: 2.8rem; /* Set the same height for both input and select */
+  width: 25rem;
+  height: 2.8rem;
   font-size: 16px;
   background-color: grey;
   color: whitesmoke;
   border: solid rgba(154, 154, 28, 0.692);
-  padding: 0.5rem; /* Ensure consistent padding */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 0.5rem;
+  box-sizing: border-box;
   appearance: none;
+}
+
+.form__width {
+  display: flex;
 }
 
 .form__label,
 .form__select__label {
+  width: 10rem;
   color: whitesmoke;
   font-size: 16px;
   text-align: left;
+  padding: 0.3rem 0.3rem 0.3rem 0;
 }
 
 .filter__house {

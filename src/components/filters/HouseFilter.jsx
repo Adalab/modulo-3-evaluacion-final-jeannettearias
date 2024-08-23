@@ -13,7 +13,7 @@ function HouseFilter({ houseFilter, handleChangeHouse }) {
 
     return (
         <>
-            <form >
+            <form className='form__width'>
                 <label className='form__select__label'>Selecciona la casa: </label>
                 <select className='form__select'
                     name="house"

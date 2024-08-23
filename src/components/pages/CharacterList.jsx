@@ -10,7 +10,6 @@ function CharacterList({ characters, searchWord }) {
             <p className='p__text'>No hay ningún personaje que coincida con la palabra: {searchWord}</p>
         )
     }
-
     return (
         <form className='form'>
             <ul className='cards__ul'>
@@ -21,7 +20,6 @@ function CharacterList({ characters, searchWord }) {
                 ))}
             </ul>
         </form>
-
     );
 }
 

@@ -26,11 +26,8 @@ function App() {
     fetch('https://hp-api.onrender.com/api/characters')
       .then(response => response.json())
       .then(responseData => {
-        const processedCharacters = responseData.map(character => ({
-          ...character,
-          image: character.image ? character.image : imageNotFound
-        }));
 
+        const processedCharacters = imageSetUp(responseData);
         setCharacters(processedCharacters);
       });
 
@@ -47,7 +44,10 @@ function App() {
     fetch(`https://hp-api.onrender.com/api/${path}`)
       .then((response) => response.json())
       .then((responseData) => {
-        setCharacters(responseData);
+
+        const processedCharacters = imageSetUp(responseData);
+
+        setCharacters(processedCharacters)
 
       });
 
@@ -71,6 +71,18 @@ function App() {
   const filteredCharacters = characters.filter(character =>
     character.name.toLowerCase().includes(searchInput.toLowerCase())
   );
+
+
+  //setup functions
+  const imageSetUp = (responseData) => {
+    const processedCharacters = responseData.map(character => ({
+      ...character,
+      image: character.image ? character.image : imageNotFound
+    }));
+    return processedCharacters;
+  }
+
+
   //HTML code
   return (
     <>
@@ -86,7 +98,8 @@ function App() {
             filteredCharacters={filteredCharacters}
             handleChangeCharacterFilter={handleChangeCharacterFilter}
             houseFilter={houseFilter}
-            handleChangeHouse={handleChangeHouse} />} />
+            handleChangeHouse={handleChangeHouse} />}
+          />
           <Route path='/detail/:id'
             element={<CharacterDetail
               findCharacter={findCharacter} />} />

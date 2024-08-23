@@ -16,7 +16,7 @@ function CharacterFilter({ searchInput, handleChangeCharacterFilter }) {
     //HTML code
     return (
         <>
-            <form >
+            <form className='form__width'>
                 <label className='form__label'>Busca por personaje: </label>
                 <input className='form__input'
                     type="text"

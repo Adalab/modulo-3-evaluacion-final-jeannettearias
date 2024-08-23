@@ -1,11 +1,9 @@
 import '../styles/layout/_landing.scss';
 
-
 import PropTypes from 'prop-types';
 import HouseFilter from './filters/HouseFilter';
 import CharacterFilter from './filters/CharacterFilter';
 import CharacterList from './pages/CharacterList';
-
 
 function Landing({ filteredCharacters, houseFilter, handleChangeHouse, searchInput, handleChangeCharacterFilter }) {
 
@@ -20,11 +18,13 @@ function Landing({ filteredCharacters, houseFilter, handleChangeHouse, searchInp
                     <HouseFilter
                         houseFilter={houseFilter}
                         handleChangeHouse={handleChangeHouse} />
+
                 </section>
                 <section className='cards__section'>
                     <CharacterList
                         characters={filteredCharacters}
                         searchWord={searchInput}
+
                     />
                 </section>
             </div>
@@ -39,6 +39,7 @@ Landing.propTypes = {
     filteredCharacters: PropTypes.array.isRequired,
     handleChangeHouse: PropTypes.func.isRequired,
     handleChangeCharacterFilter: PropTypes.func.isRequired
+
 };
 
 export default Landing;
