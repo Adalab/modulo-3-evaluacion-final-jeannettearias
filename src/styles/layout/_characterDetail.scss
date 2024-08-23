@@ -1,34 +1,43 @@
 .detail__section {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the card horizontally */
-}
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(103, 17, 4, 0.692);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
 
+  max-width: 500px;
+}
 .card__detail {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.form__detail {
+  display: flex;
   flex-direction: column;
-  align-items: center; /* Center content inside the card */
-  justify-content: center; /* Center content inside the card */
-  background-color: rgba(103, 17, 4, 0.692); /* Background color for the card */
-  padding: 2rem;
-  border-radius: 1rem; /* Optional: Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
-  width: 100%;
-  max-width: 500px; /* Control the maximum width of the card */
+  justify-content: center;
+  text-align: left;
 }
 
 .cardDetail__img {
-  max-width: 100%; /* Make sure the image is responsive */
-  width: 14rem;
-  height: 18rem;
-  margin-bottom: 1rem; /* Space between the image and the text */
+  max-width: 100%;
+  width: 16rem;
+  height: 20rem;
+  margin-bottom: 1rem;
 }
 
 .cardDetail__description {
-  margin-bottom: 0.5rem; /* Space between each description item */
+  margin-bottom: 0.5rem;
   color: whitesmoke;
-  font-size: 1rem; /* Adjust the text size as needed */
-  text-align: center; /* Center the text */
+  font-size: 1.2rem;
+  text-align: left;
 }
 
 .name {
@@ -36,7 +45,9 @@
 }
 
 .back__btn {
-  margin-top: 2rem; /* Space between the card and the back button */
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .back__btn__style {
