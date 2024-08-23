@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the card horizontally */
-  justify-content: center; /* Center the card vertically */
-  min-height: 100vh; /* Make the section take up the full height of the viewport */
 }
 
 .card__detail {

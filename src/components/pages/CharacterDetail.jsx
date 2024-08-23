@@ -14,6 +14,7 @@ function CharacterDetail({ findCharacter }) {
             <p className='p__text'>El personaje que buscas no existe</p>
         )
     }
+    console.log(characterToShow);
 
     //HTML code
     return (

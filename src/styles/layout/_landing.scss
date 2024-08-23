@@ -10,20 +10,21 @@
 
 .filters__section {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 .cards__section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .cards__ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
 }
 
 .card__li {
